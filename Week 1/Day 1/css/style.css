@@ -34,7 +34,7 @@ body p{
 
 .navbar ul li a{
     color: white;
-    font-size: 16;
+    font-size: 16px;
     padding: 5px;
     border-radius: 5px;
     text-decoration: none;
@@ -43,7 +43,7 @@ body p{
 .navbar ul li a:hover{
     color: rgb(0, 0, 0);
     background-color: #ffffff;
-    font-size: 16;
+    font-size: 16px;
     text-decoration: none;
 }
 
@@ -83,7 +83,7 @@ main h1{
 
 .footer ul li a{
     color: white;
-    font-size: 16;
+    font-size: 16px;
     padding: 5px;
     border-radius: 5px;
     text-decoration: none;
@@ -92,6 +92,6 @@ main h1{
 .footer ul li a:hover{
     color: rgb(0, 0, 0);
     background-color: #ffffff;
-    font-size: 16;
+    font-size: 16px;
     text-decoration: none;
 }
