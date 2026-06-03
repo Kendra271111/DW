@@ -32,7 +32,20 @@ body p{
     list-style: none;
 }
 
+.navbar ul li a{
+    color: white;
+    font-size: 16;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+}
 
+.navbar ul li a:hover{
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    font-size: 16;
+    text-decoration: none;
+}
 
 main h1{
     margin-left: 10px;
@@ -68,7 +81,17 @@ main h1{
     justify-content: right;
 }
 
-.footer ul li i{
+.footer ul li a{
     color: white;
     font-size: 16;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.footer ul li a:hover{
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    font-size: 16;
+    text-decoration: none;
 }
