@@ -52,7 +52,8 @@ if (form) {
         console.log(messagecard);
         nameInput.value = "";
         messageInput.value = "";
-        updateTable();
+        updateTab
+        le();
     });
 }
 
