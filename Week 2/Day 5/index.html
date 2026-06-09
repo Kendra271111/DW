@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Bootstrap CSS v5.3.8 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+        />
+    </head>
+
+    <body>
+        <header>
+            <ul class="nav nav-tabs bg-dark d-flex" id="navId" role="tablist">
+                <li>
+                    <h2
+                        href="#tab1Id"
+                        class="bg-dark text-white fw-bold ml-10 ms-10"
+                        data-bs-toggle="tab"
+                        aria-current="page"
+                        >Student Data</h2
+                    >
+                </li>
+                <li class="nav-item dropdown">
+                    <a
+                        class="nav-link dropdown-toggle text-white"
+                        data-bs-toggle="dropdown"
+                        href="#"
+                        role="button"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        >Tools</a
+                    >
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#tab2Id">Action</a>
+                        <a class="dropdown-item" id="resetall" href="#tab3Id">Reset</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#tab4Id">Login</a>
+                    </div>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a href="#tab5Id" class="nav-link text-white" data-bs-toggle="tab"
+                        >Home</a
+                    >
+                </li>
+                <!-- <li class="nav-item" role="presentation">
+                    <a href="#" class="nav-link disabled" data-bs-toggle="tab"
+                        >Disabled</a
+                    >
+                </li> -->
+            </ul>
+            
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="tab1Id" role="tabpanel">
+                    
+                </div>
+                <div class="tab-pane fade" id="tab2Id" role="tabpanel"></div>
+                <div class="tab-pane fade" id="tab3Id" role="tabpanel"></div>
+                <div class="tab-pane fade" id="tab4Id" role="tabpanel"></div>
+                <div class="tab-pane fade" id="tab5Id" role="tabpanel"></div>
+            </div>
+            
+            
+        </header>
+        <main>
+             <div class="d-flex flex-column justify-content-between align-items-center main-container" style="min-height: 100vh; min-width: 100%;">
+                <div class="row mt-5 align-items-start gx-5" style="min-height: 100vh;">
+                    <div class="d-flex mb-4 flex-column" style="width: 900px;">
+                        
+                            <h3 class="card-header bg-white text-primary p-1">
+                                Daftar Nilai Siswa
+                            </h3>
+                            <div class="card-body mb-3">
+                                <input type="text" class="form-control" id="SearchByName" placeholder="Search" aria-describedby="nameHelp">
+                            </div>
+                            <div
+                                class="table-responsive mt-2 table-striped table-hover table-bordered text-center"
+                            >
+                                <table
+                                    class="table table-white m-0 "
+                                >
+                                    <thead class="border border-bottom-0">
+                                        <tr>
+                                            <th scope="col">No</th>
+                                            <th scope="col">Nama Siswa</th>
+                                            <th scope="col">Kelas</th>
+                                            <th scope="col">Nilai</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tablesiswa">
+                                            
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="3" class="text-end fw-bold">Rata-rata Nilai Kelas</td>
+                                            <td id="averageScore" class="fw-bold"></td>
+                                        </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+        <footer>
+           
+        </footer>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            var triggerEl = document.querySelector("#navId a");
+            if (triggerEl && window.bootstrap && bootstrap.Tab && bootstrap.Tab.getInstance) {
+                bootstrap.Tab.getInstance(triggerEl).show();
+            }
+        </script>
+        <script src="js/day5.js"></script>
+    </body>
+</html>
