@@ -59,7 +59,7 @@ let studentdata = JSON.parse(localStorage.getItem("studentdata")) || [
         id: 10,
         nama: "Wandi",
         kelas: kelasArray[2],
-        Nilai: 909
+        Nilai: 99
     },
 ];
 
