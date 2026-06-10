@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const kelasArray = ["Full Stack A", "Full Stack B", "Backend Core"];
 const studentdata = JSON.parse(localStorage.getItem("studentdata") || "[]") || [
     {
@@ -93,5 +95,4 @@ function calculateAverageScore() {
 window.searchBar = searchBar;
 window.rendertable = rendertable;
 window.calculateAverageScore = calculateAverageScore;
-export {};
 //# sourceMappingURL=script.js.map
