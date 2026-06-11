@@ -1,6 +1,14 @@
-const kelasArray: string[] = ["Full Stack A", "Full Stack B", "Backend Core"];
+interface Student {
+    id: number;
+    nama: string;
+    kelas: string;
+    Nilai: number;
+}
 
-const studentdata: { id: number; nama: string; kelas: string; Nilai: number }[] = JSON.parse(localStorage.getItem("studentdata") || "[]") || [
+const kelasArray = ["Full Stack A", "Full Stack B", "Backend Core"] as const;
+
+const parsedData = JSON.parse(localStorage.getItem("studentdata") || "null") as Student[] | null;
+const studentdata: Student[] = parsedData && parsedData.length > 0 ? parsedData : [
     {
         id: 1,
         nama: "Budi",
@@ -63,11 +71,11 @@ const studentdata: { id: number; nama: string; kelas: string; Nilai: number }[] 
     },
 ];
 
-function rendertable(data = studentdata){
+function rendertable(data: Student[] = studentdata){
     const tableBody = document.getElementById("tablesiswa") as HTMLTableSectionElement;
     tableBody.innerHTML = "";
 
-    data.map((student) => {
+    data.map((student: Student) => {
         const row = document.createElement("tr");
 
         row.innerHTML = `  
@@ -86,7 +94,7 @@ function searchBar() {
         searchInput.addEventListener('input', (event) => {
             const searchWord = (event.target as HTMLInputElement).value.toLowerCase(); 
             
-            const matchedItems = studentdata.filter(student => {
+            const matchedItems = studentdata.filter((student: Student) => {
                 return student.nama.toLowerCase().includes(searchWord); 
             });
             rendertable(matchedItems);
@@ -94,7 +102,7 @@ function searchBar() {
     }
 
 function calculateAverageScore() {
-    const totalScore = studentdata.reduce((acc, student) => acc + student.Nilai, 0);
+    const totalScore = studentdata.reduce((acc: number, student: Student) => acc + student.Nilai, 0);
     const averageScore = totalScore / studentdata.length;
     (document.getElementById("averageScore") as HTMLTableRowElement).textContent = averageScore.toFixed(2);
 }
