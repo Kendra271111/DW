@@ -27,7 +27,6 @@ let userData = JSON.parse(localStorage.getItem("namelist")) || [
 function renderNameList() {
     const namelistSpan = document.getElementById("namelist");
     if (!namelistSpan) return;
-    namelistSpan.innerHTML = userData.map(u => ``).join("");
 }
 
 renderNameList();
@@ -92,7 +91,7 @@ let message = JSON.parse(localStorage.getItem("messagelist")) || [
     {
         id: 1,
         user: userData[0],
-        text: "this place sucks",
+        text: "yes",
         likes: "12345",
         replies: "7000",
         timestamp: "6/12/2026, 6:41:40 PM"
